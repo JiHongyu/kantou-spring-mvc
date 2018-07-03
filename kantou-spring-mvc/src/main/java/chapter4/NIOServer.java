@@ -1,10 +1,10 @@
 package chapter4;
 
 /**
- * Description:
- * User: jihy
- * Date: 2018-07-01
- * Time: 21:07
+ * @Description:
+ * @author: jihy
+ * @date: 2018-07-01
+ * @time: 21:07
  */
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.util.Iterator;
 
-import static common.Constant.DEDAULT_PORT;
+import static common.Constant.DEFAULT_PORT;
 
 
 public class NIOServer {
@@ -25,7 +25,7 @@ public class NIOServer {
 
         //创建ServerSocketChannel，监听8080端口
         ServerSocketChannel ssc=ServerSocketChannel.open();
-        ssc.socket().bind(new InetSocketAddress(DEDAULT_PORT));
+        ssc.socket().bind(new InetSocketAddress(DEFAULT_PORT));
 
         //设置为非阻塞模式
         ssc.configureBlocking(false);

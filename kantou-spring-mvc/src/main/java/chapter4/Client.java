@@ -1,24 +1,24 @@
 package chapter4;
 
 /**
- * Description:
- * User: jihy
- * Date: 2018-07-01
- * Time: 21:07
+ * @Description:
+ * @author: jihy
+ * @date: 2018-07-01
+ * @time: 21:07
  */
 
 import java.io.*;
 import java.net.Socket;
 
-import static common.Constant.DEDAULT_PORT;
+import static common.Constant.DEFAULT_PORT;
 import static common.Constant.LOCAL_IP;
 
 public class Client {
-    public static void main(String args[]) {
+    public static void main(String [] args) {
         String msg = "Client Data";
         try {
             //创建一个Socket，跟本机的8080端口连接
-            Socket socket = new Socket(LOCAL_IP, DEDAULT_PORT);
+            Socket socket = new Socket(LOCAL_IP, DEFAULT_PORT);
             //使用Socket创建PrintWriter和BufferedReader进行读写数据
             PrintWriter pw = new PrintWriter(socket.getOutputStream());
             BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));

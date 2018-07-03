@@ -8,6 +8,6 @@ package common;
  */
 public class Constant {
 
-    public static int DEDAULT_PORT = 8089;
+    public static int DEFAULT_PORT = 8089;
     public static String LOCAL_IP = "127.0.0.1";
 }
